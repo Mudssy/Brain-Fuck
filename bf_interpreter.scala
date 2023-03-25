@@ -94,7 +94,6 @@ def run(prog: String, m: Mem = Map()) = {
 }
 
 
-//run(load_bff("benchmark.bf"))
 
 // calculates the Collatz series for numbers from 1 to 30
 //
