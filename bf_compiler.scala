@@ -141,8 +141,8 @@ def run(pg: String, m: Mem = Map()) = {
 }
 
 
-// time_needed(1, run4(load_bff("benchmark.bf")))
-// time_needed(1, run4(load_bff("sierpinski.bf"))) 
-// time_needed(1, run4(load_bff("mandelbrot.bf")))
+// time_needed(1, run(load_bff("benchmark.bf")))
+// time_needed(1, run(load_bff("sierpinski.bf"))) 
+// time_needed(1, run(load_bff("mandelbrot.bf")))
 
 }
