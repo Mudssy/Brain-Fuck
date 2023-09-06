@@ -106,10 +106,10 @@ def compute(pg: String, tb: Map[Int, Int], pc: Int, mp: Int, mem: Mem) : Mem = {
 	if ( pc < 0 || pc >= pg.length) mem 
     else{
         pg(pc) match{
-            case '>' => compute4(pg, tb, pc + 2, mp + (pg(pc+1).toInt - 64), mem)
-            case '<' => compute4(pg, tb, pc + 2, mp - (pg(pc+1).toInt - 64), mem)
-            case '+' => compute4(pg, tb, pc + 2, mp, write(mem, mp, sread(mem, mp) + (pg(pc + 1).toInt - 64)))
-            case '-' => compute4(pg, tb, pc + 2, mp, write(mem, mp, sread(mem, mp) - (pg(pc + 1).toInt - 64)))
+            case '>' => compute(pg, tb, pc + 2, mp + (pg(pc+1).toInt - 64), mem)
+            case '<' => compute(pg, tb, pc + 2, mp - (pg(pc+1).toInt - 64), mem)
+            case '+' => compute(pg, tb, pc + 2, mp, write(mem, mp, sread(mem, mp) + (pg(pc + 1).toInt - 64)))
+            case '-' => compute(pg, tb, pc + 2, mp, write(mem, mp, sread(mem, mp) - (pg(pc + 1).toInt - 64)))
             case '.' => {
                 print(sread(mem,mp).toChar)
                 compute4(pg,tb,pc+1, mp,mem)
